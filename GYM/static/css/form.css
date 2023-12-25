@@ -1,0 +1,39 @@
+.form{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECE9E9;
+}
+.form__control-label{
+    color: var(--primary-color);
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+#username, #email, #password, #confirm_password, #phone{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border: solid 3px var(--primary-color);
+    border-radius: 6px;
+}
+.form__title{
+    margin: -40px;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.form__content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 140px;
+    justify-content: center;
+}
+
+.from__group-container{
+    display: flex;
+    flex-direction: column;
+}
+.btn-signup{
+    margin-top: 20px;
+    padding: 10px 68px;
+}

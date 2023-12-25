@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/profile.css">
+    <link rel="stylesheet" href="../static/css/update_form.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/grid.css">
+    <link rel="stylesheet" href="../static/icon/">
+    <link rel="stylesheet" href="../static/font/">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="profile-page">
+        <div class="grid wide">
+            <div class="row row-s-gutter" style="min-height: 900px;">
+                <div class="col l-2 task-bar">
+                    <h3 class="task-bar__brand">
+                        <i class="task-bar__icon-brand fa-solid fa-heart"></i>
+                        Tin, Vi, Khoi
+                    </h3>
+                    <div class="task-bar__content">
+                        <nav class="task-bar__nav">
+                            <ul class="task-bar__list">
+                                <a href="{{ url_for('user')}}" class="task-bar__link">
+                                    <li class="task-bar__item">
+
+                                        <i class="task-bar__icon fa-solid fa-house"></i>
+                                        Profile
+                                    </li>
+                                </a>
+                        </nav>
+                        <a href="{{ url_for('logout')}}" class="task-bar__link task-bar__item">
+                                <i class="task-bar__icon fa-solid fa-right-from-bracket"></i>
+                                Log Out</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col l-10">
+                    <div class="profile-info">
+                        <header class="profile-header">
+                            <div class="header__nav">
+                                <ul class="header__nav-list">
+                                    <li class="header__nav-item">
+                                        <a href="{{url_for('home')}}" class="header__nav-link">
+                                            <img src="../static/icon/logotext.png" alt="" class="header__nav-img">
+                                        </a>
+                                    </li>
+                                    <div class="" style="display: inline-flex">
+                                        <li class="header__nav-item">
+                                            <a href="#" class="header__nav-link">
+                                                Feedback
+                                            </a>
+                                        </li>
+                                        <li class="header__nav-item">
+                                            <a href="#" class="header__nav-link">
+                                                <i class="fa-regular fa-bell"></i>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </ul>
+
+                            </div>
+                        </header>
+                        {% block content %}
+                        {% endblock %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

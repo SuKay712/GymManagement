@@ -1,0 +1,49 @@
+:root {
+    --white-color: #ffffff;
+    --black-color: #000;
+    --text-color: #666;
+    --header-height: 76px;
+    --primary-color: #1A1363;
+    --yellow-color: #FDEE21;
+    --light-yellow-color: #FFFF7D;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.mtb-10{
+    margin: 10px 0;
+}
+.btn{
+    background-color: #1A1363;
+    color: var(--white-color);
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.white-color{
+    color: white;
+}
+.btn-action{
+    padding: 6px 10px;
+    background-color: white;
+    color: #2B2B2B;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    min-width: 60px;
+}
+.btn-reset{
+    padding: 6px 10px;
+    font-size: 1.4rem;
+    width: 192px;;
+}

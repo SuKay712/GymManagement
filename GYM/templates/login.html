@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Managment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/grid.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../static/font/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div class="grid wide">
+            <div class="form">
+                <div class="form__content">
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form__group" style="border: none; padding: 0">
+                            <legend class="form__title">Sign In</legend>
+
+                            <div class="form__group-container">
+                                <div class="mtb-10">
+                                    {{ form.email.label(class = "form__control-label")}}
+                                </div>
+                                <div class="mtb-10">
+                                    {% if form.email.errors %}
+                                    {{ form.email(class = "form__control border--red")}}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                        <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.email(class = form__control)}}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="form__group-container">
+                                <div class="mtb-10">
+                                    {{ form.password.label(class = "form__control-label")}}
+
+                                </div>
+                                <div class="mtb-10">
+                                    {% if form.password.errors %}
+                                    {{ form.password(class = "form__control border--red")}}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    {{ form.password(class = form__control)}}
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class = "btn btn-signup") }}
+                        </div>
+                    </form>
+                    <small style=" margin-top: 12px;">
+                        <a href="{{ url_for('reset_request') }} "
+                            style="color: var(--primary-color); font-size: 1.6rem; font-weight: 500;">Forgot
+                            password?</a>
+                    </small>
+                    <small style=" margin-top: 12px;">
+                        <a href="{{ url_for('register') }} "
+                            style="color: var(--primary-color); font-size: 1.6rem; font-weight: 500;">Need an account?</a>
+                    </small>
+                </div>
+                <img src="../static/icon/home_icon.png" style="height: 700px;" alt="" class="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

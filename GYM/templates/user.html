@@ -1,0 +1,161 @@
+{% extends "userProfile.html" %}
+{% block content%}
+<h1 class="profile-page__header">Admin Information</h1>
+<div class="profile-page__content">
+    <div class="col l-4-8">
+        <div class="profile-user">
+            <img class="profile-user__image" src="{{ image_file }}" alt="" style="width: 69px;">
+
+            <div class="profile-user__item">
+                <span class="username">Username</span>
+                <span class="username">{{current_user.username}}</span>
+            </div>
+            <div class="profile-user__item">
+                <span class="username">Contact no: </span>
+                <span class="username">{{current_user.phone}}</span>
+            </div>
+            <div class="profile-user__item">
+                <span class="username">Email: </span>
+                <span class="username">{{current_user.email}}</span>
+            </div>
+            <div class="profile-user__item">
+                <span class="username">Plan: </span>
+                <span class="username">{{current_user.plan}}</span>
+            </div>
+            {% if current_user.plan%}
+            <div class="profile-user__item">
+                <span class="username">Day Start: </span>
+                <span class="username">{{current_user.date_start.strftime('%d-%m-%Y')}}</span>
+            </div>
+            <div class="profile-user__item">
+                <span class="username">End: </span>
+                <span class="username">{{current_user.date_expired.strftime('%d-%m-%Y')}}</span>
+            </div>
+            {% endif%}
+        </div>
+    </div>
+    <div class="col l-5-2">
+        <div class="profile-update">
+            <form method="POST" action="" style="width: 100%; padding: 20px;">
+                {{ form.hidden_tag() }}
+                <fieldset class="form__group" style="border: none; padding: 0">
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.username.label(class = "form__control-label")}}
+                        </div>
+                        <div class="mtb-10">
+                            {% if form.username.errors %}
+                            {{ form.username(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.username.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.username(class = form__control)}}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.phone.label(class = "form__control-label")}}
+
+                        </div>
+                        <div class="mtb-10">
+                            {% if form.phone.errors %}
+                            {{ form.phone(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.phone.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.phone(class = form__control)}}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.email.label(class = "form__control-label")}}
+
+                        </div>
+                        <div class="mtb-10">
+                            {% if form.email.errors %}
+                            {{ form.email(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.email(class = form__control)}}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.current_password.label(class = "form__control-label")}}
+
+                        </div>
+                        <div class="mtb-10">
+                            {% if form.current_password.errors %}
+                            {{ form.current_password(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.current_password.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.current_password(class = form__control)}}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.new_password.label(class = "form__control-label")}}
+
+                        </div>
+                        <div class="mtb-10">
+                            {% if form.new_password.errors %}
+                            {{ form.new_password(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.new_password.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.new_password(class = form__control)}}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="form__group-container">
+                        <div class="mtb-10">
+                            {{ form.confirm_password.label(class = "form__control-label")}}
+
+                        </div class="mtb-10">
+                        <div>
+                            {% if form.confirm_password.errors %}
+                            {{ form.confirm_password(class = "form__control border--red")}}
+                            <div class="invalid-feedback">
+                                {% for error in form.confirm_password.errors %}
+                                <span style="color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.confirm_password(class = form__control)}}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class = "btn btn-update") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock%}

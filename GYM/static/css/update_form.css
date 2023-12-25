@@ -1,0 +1,98 @@
+.form__control-label {
+    color: #2B2B2B;
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+#username,
+#email,
+#password,
+#confirm_password,
+#phone,
+#current_password,
+#new_password,
+#plan {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border-radius: 12px;
+    background-color: #E9E9E9;
+    height: 3.3rem;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form__title {
+    margin: -40px;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 140px;
+    justify-content: center;
+}
+
+.from__group-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-update {
+    margin-top: 20px;
+    padding: 10px 68px;
+}
+
+.plan-form {
+    display: flex;
+    background-color: #332F64;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.plan-form__control-label {
+    color: white;
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+#name,
+#duration,
+#price,
+#quantity{
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    border-radius: 12px;
+    background-color: #E9E9E9;
+    height: 3.3rem;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.plan-table {
+    width: 100%;
+}
+
+.plan-table__title {
+    font-size: 1.6rem;
+    color: #FFFADF;
+    font-weight: 500;
+}
+.plan-table__data{
+    color: white;
+    font-weight: 200;
+    font-size: 1.4rem;
+    padding: 12px 0;
+
+}

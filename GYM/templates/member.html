@@ -1,0 +1,26 @@
+{% extends "profile.html" %}
+{% block content%}
+<h1 class="profile-page__header">Active Members</h1>
+<div class="plan-add">
+    <form method="GET" action="" style="width: 100%; padding: 20px;">
+        <div class="plan-form" style = "background-color: #77749B;">
+            <table class = "plan-table">
+                <tr>
+                    <th class = "plan-table__title">Name</th>
+                    <th class = "plan-table__title">Phone Number</th>
+                    <th class = "plan-table__title">Email</th>
+                    <th class = "plan-table__title">Plan</th>
+                </tr>
+                {% for member in members %}
+                <tr>
+                    <th class = "plan-table__data">{{member.username}}</th>
+                    <th class = "plan-table__data">{{member.phone}}</th>
+                    <th class = "plan-table__data">{{member.email}}</th>
+                    <th class = "plan-table__data">{{member.plan}}</th>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </form>
+</div>
+{% endblock %}

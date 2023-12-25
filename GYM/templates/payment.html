@@ -1,0 +1,52 @@
+{% extends "profile.html" %}
+{% block content%}
+<h1 class="profile-page__header" style = "color: #DEBA3B; font-size: 3.6rem; font-weight:500;">Point of Sale</h1>
+<h1 class="profile-page__header" style = "color:var(--primary-color); font-size: 4.8rem; font-weight:500;">Add Payment</h1>
+<div class="profile-update">
+    <form method="POST" action="" style = "width: 100%; padding: 20px;">
+        {{ form.hidden_tag() }}
+        <fieldset class = "form__group" style = "border: none; padding: 0">
+             <div class="form__group-container">
+                 <div class="mtb-10">
+                     {{ form.phone.label(class = "form__control-label")}}
+                 </div>
+                 <div class="mtb-10">
+                     {% if form.phone.errors %}
+                     {{ form.phone(class = "form__control border--red")}}
+                     <div class="invalid-feedback">
+                         {% for error in form.phone.errors %}
+                             <span style = "color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                         {% endfor %}
+                     </div>
+                     {% else %}
+                         {{ form.phone(class = form__control)}}
+                     {% endif %}
+                 </div>
+                 
+             </div>
+             <div class="form__group-container">
+                 <div class="mtb-10">
+                 {{ form.plan.label(class = "form__control-label")}}
+
+                 </div>
+                 <div class="mtb-10">
+                     {% if form.plan.errors %}
+                     {{ form.plan(class = "form__control border--red")}}
+                     <div class="invalid-feedback">
+                         {% for error in form.plan.errors %}
+                             <span style = "color: rgb(182, 34, 34); font-size: 1.2rem;">{{ error }}</span>
+                         {% endfor %}
+                     </div>
+                     {% else %}
+                         {{ form.plan(class = form__control)}}
+                     {% endif %}
+                 </div>
+                 
+             </div>
+        </fieldset> 
+        <div class="form-group">
+             {{ form.submit(class = "btn btn-update") }}
+         </div>
+     </form>
+</div>
+{% endblock %}
