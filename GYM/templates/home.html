@@ -27,36 +27,42 @@
                     <ul class="header__navbar-list">
 
                         <li class="header__navbar-item">
-                            <a href="#about" style = "text-decoration: none; color: var(--primary-color);">About</a>
+                            <a href="#about" style="text-decoration: none; color: var(--primary-color);">About</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#plan" style = "text-decoration: none; color: var(--primary-color);">Plan</a>
+                            <a href="#plan" style="text-decoration: none; color: var(--primary-color);">Plan</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#coach" style = "text-decoration: none; color: var(--primary-color);">Coaches</a>
+                            <a href="#coach" style="text-decoration: none; color: var(--primary-color);">Coaches</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="#visit" style = "text-decoration: none; color: var(--primary-color);">Visit our Gym</a>
+                            <a href="#visit" style="text-decoration: none; color: var(--primary-color);">Visit our
+                                Gym</a>
                         </li>
                         {% if current_user.is_authenticated %}
                         <li class="header__navbar-item">
                             {% if current_user.username == 'admin' %}
-                                <a href="{{url_for('account')}}" style = "text-decoration: none; color: var(--primary-color);">Account</a>
+                            <a href="{{url_for('account')}}"
+                                style="text-decoration: none; color: var(--primary-color);">Account</a>
                             {% else %}
-                                <a href="{{url_for('user')}}" style = "text-decoration: none; color: var(--primary-color);">Account</a>
+                            <a href="{{url_for('user')}}"
+                                style="text-decoration: none; color: var(--primary-color);">Account</a>
 
                             {% endif %}
                         </li>
                         <li class="header__navbar-item">
-                            <a href="{{url_for('logout')}}" style = "text-decoration: none; color: var(--primary-color);">Log Out</a>
+                            <a href="{{url_for('logout')}}"
+                                style="text-decoration: none; color: var(--primary-color);">Log Out</a>
                         </li>
                         {% else %}
                         <li class="header__navbar-item">
-                            <a href="{{url_for('login')}}" style = "text-decoration: none; color: var(--primary-color);">Sign In</a>
+                            <a href="{{url_for('login')}}"
+                                style="text-decoration: none; color: var(--primary-color);">Sign In</a>
                         </li>
 
                         <li class="header__navbar-item" style="background-color: var(--yellow-color);">
-                            <a href="{{url_for('register')}}" style = "text-decoration: none; color: var(--primary-color);">Sign Up</a>
+                            <a href="{{url_for('register')}}"
+                                style="text-decoration: none; color: var(--primary-color);">Sign Up</a>
                         </li>
                         {% endif %}
                     </ul>
@@ -64,142 +70,146 @@
             </div>
         </header>
         <div class="app__content">
-            <div class="home">
-                <div class="home__title">
-                    <ul class="home__title-list">
-                        <li class="home__title-item">START A BETTER</li>
-                        <li class="home__title-item">SHAPE OF YOU!</li>
-                        <li class="home__title-item" style="color: var(--light-yellow-color)">COME JOIN US!</li>
-                    </ul>
+            <div class="grid wide">
+                <div class="home">
+                    <div class="home__title">
+                        <ul class="home__title-list">
+                            <li class="home__title-item">START A BETTER</li>
+                            <li class="home__title-item">SHAPE OF YOU!</li>
+                            <li class="home__title-item" style="color: var(--light-yellow-color)">COME JOIN US!</li>
+                        </ul>
+                    </div>
+                    <img src="../static/icon/home_icon.png" alt="" class="home__icon">
                 </div>
-                <img src="../static/icon/home_icon.png" alt="" class="home__icon">
-            </div>
-            <div class="about" id="about">
-                <div class="about__title">
-                    <h3 class="about__title-item" style="font-size:3.6rem;">About</h3>
-                    <h1 class="about__title-item" style="font-size:4.8rem;">STAMINA GYM FOR MAN & WOMAN</h1>
-                </div>
-                <div class="about__content">
-                    <div class="about__content-icon about__content-icon--left">
+                <div class="about" id="about">
+                    <div class="about__title">
+                        <h3 class="about__title-item" style="font-size:3.6rem;">About</h3>
+                        <h1 class="about__title-item" style="font-size:4.8rem;">STAMINA GYM FOR MAN & WOMAN</h1>
+                    </div>
+                    <div class="about__content">
+                        <div class="about__content-icon about__content-icon--left">
 
-                    </div>
-                    <div class="about__content-info">
-                        <p class="about__content-text">Stamina Gym Fitness Center provides proper training and
-                            conditioning
-                            for members who want to improve and transform their body with Program depend on the body
-                            composition.</p>
-                        <span class="" style="color: var(--white-color); font-size: 3.6rem; font-weight: 700;">What we
-                            offer</span>
-                        <div class="about__content-feature">
-                            <img src="../static/icon/OfferIcon1.png" alt="" class="about__content-feature-icon">
-                            <img src="../static/icon/OfferIcon2.png" alt="" class="about__content-feature-icon">
-                            <img src="../static/icon/OfferIcon3.png" alt="" class="about__content-feature-icon">
                         </div>
-                    </div>
-                    <div class="about__content-icon about__content-icon--right">
+                        <div class="about__content-info">
+                            <p class="about__content-text">Stamina Gym Fitness Center provides proper training and
+                                conditioning
+                                for members who want to improve and transform their body with Program depend on the body
+                                composition.</p>
+                            <span class="" style="color: var(--white-color); font-size: 3.6rem; font-weight: 700;">What
+                                we
+                                offer</span>
+                            <div class="about__content-feature">
+                                <img src="../static/icon/OfferIcon1.png" alt="" class="about__content-feature-icon">
+                                <img src="../static/icon/OfferIcon2.png" alt="" class="about__content-feature-icon">
+                                <img src="../static/icon/OfferIcon3.png" alt="" class="about__content-feature-icon">
+                            </div>
+                        </div>
+                        <div class="about__content-icon about__content-icon--right">
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="plan" id="plan">
-                <div class="plan__title">
-                    <span class="plan__title-text">JOIN OUR MEMBERSHIP</span>
-                </div>
-                <div class="plan__content">
-                    <div class="plan__content-title">
-                        <span class="plan__content-title-text"
-                            style="margin-left: 30px;margin-right: 20px; color: var(--primary-color)">Our</span>
-                        <span class="plan__content-title-text">Plan:</span>
+                <div class="plan" id="plan">
+                    <div class="plan__title">
+                        <span class="plan__title-text">JOIN OUR MEMBERSHIP</span>
                     </div>
-                    <div class="plan__content-features">
-                        <div class="plan__feature-container" style="background-color: #FFFFFF; margin-top: 80px; ">
-                            <div class="plan__feature  plan__feature1">
-                                <img src="../static/icon/mdi_chess-pawn.png" alt="">
-                                <span class="plan__feature-info">Anual</span>
-                                <span class="plan__feature-info">Membership</span>
-                            </div>
+                    <div class="plan__content">
+                        <div class="plan__content-title">
+                            <span class="plan__content-title-text"
+                                style="margin-left: 30px;margin-right: 20px; color: var(--primary-color)">Our</span>
+                            <span class="plan__content-title-text">Plan:</span>
                         </div>
-                        <div class="plan__feature-container"
-                            style="background-color: #3E3E3E; margin-top: 100px; margin-bottom: -20px;">
-                            <div class="plan__feature  plan__feature2">
-                                <div class="plan__feature-header">
-                                    <span class="plan__feature-header-icon">7</span>
-                                    <img src="../static/icon/mdi_chess-knight.png"
-                                        style="width: 36px; align-self: flex-start" alt="">
+                        <div class="plan__content-features">
+                            <div class="plan__feature-container" style="background-color: #FFFFFF; margin-top: 80px; ">
+                                <div class="plan__feature  plan__feature1">
+                                    <img src="../static/icon/mdi_chess-pawn.png" alt="">
+                                    <span class="plan__feature-info">Anual</span>
+                                    <span class="plan__feature-info">Membership</span>
                                 </div>
-                                <span class="plan__feature-info-top">Days</span>
-                                <span class="plan__feature-info">Weekly Rate</span>
                             </div>
-                        </div>
-                        <div class="plan__feature-container" style="background-color: #77749B; margin-top: 80px;">
-                            <div class="plan__feature  plan__feature2">
-                                <div class="plan__feature-header">
-                                    <span class="plan__feature-header-icon">1</span>
-                                    <img src="../static/icon/mdi_chess-bishop.png"
-                                        style="width: 36px; align-self: flex-start" alt="">
+                            <div class="plan__feature-container"
+                                style="background-color: #3E3E3E; margin-top: 100px; margin-bottom: -20px;">
+                                <div class="plan__feature  plan__feature2">
+                                    <div class="plan__feature-header">
+                                        <span class="plan__feature-header-icon">7</span>
+                                        <img src="../static/icon/mdi_chess-knight.png"
+                                            style="width: 36px; align-self: flex-start" alt="">
+                                    </div>
+                                    <span class="plan__feature-info-top">Days</span>
+                                    <span class="plan__feature-info">Weekly Rate</span>
                                 </div>
-                                <span class="plan__feature-info-top">Month</span>
-                                <span class="plan__feature-info">Month Rate</span>
                             </div>
-                        </div>
-                        <div class="plan__feature-container"
-                            style="background-color: #332F64; margin-top: 100px; margin-bottom: -20px;">
-                            <div class="plan__feature  plan__feature2">
-                                <div class="plan__feature-header">
-                                    <span class="plan__feature-header-icon">6</span>
-                                    <img src="../static/icon/mdi_chess-king.png"
-                                        style="width: 36px; align-self: flex-start" alt="">
+                            <div class="plan__feature-container" style="background-color: #77749B; margin-top: 80px;">
+                                <div class="plan__feature  plan__feature2">
+                                    <div class="plan__feature-header">
+                                        <span class="plan__feature-header-icon">1</span>
+                                        <img src="../static/icon/mdi_chess-bishop.png"
+                                            style="width: 36px; align-self: flex-start" alt="">
+                                    </div>
+                                    <span class="plan__feature-info-top">Month</span>
+                                    <span class="plan__feature-info">Month Rate</span>
                                 </div>
-                                <span class="plan__feature-info-top">Months</span>
-                                <span class="plan__feature-info">Biannual Rate</span>
                             </div>
-                        </div>
-                        <div class="plan__feature-container"
-                            style="background-color: var(--primary-color); margin-top: 80px;">
-                            <div class="plan__feature  plan__feature2">
-                                <div class="plan__feature-header">
-                                    <span class="plan__feature-header-icon">1</span>
-                                    <img src="../static/icon/mdi_crown.png" style="width: 36px; align-self: flex-start"
-                                        alt="">
+                            <div class="plan__feature-container"
+                                style="background-color: #332F64; margin-top: 100px; margin-bottom: -20px;">
+                                <div class="plan__feature  plan__feature2">
+                                    <div class="plan__feature-header">
+                                        <span class="plan__feature-header-icon">6</span>
+                                        <img src="../static/icon/mdi_chess-king.png"
+                                            style="width: 36px; align-self: flex-start" alt="">
+                                    </div>
+                                    <span class="plan__feature-info-top">Months</span>
+                                    <span class="plan__feature-info">Biannual Rate</span>
                                 </div>
-                                <span class="plan__feature-info-top">Year</span>
-                                <span class="plan__feature-info">Annual Rate</span>
                             </div>
-                        </div>
+                            <div class="plan__feature-container"
+                                style="background-color: var(--primary-color); margin-top: 80px;">
+                                <div class="plan__feature  plan__feature2">
+                                    <div class="plan__feature-header">
+                                        <span class="plan__feature-header-icon">1</span>
+                                        <img src="../static/icon/mdi_crown.png"
+                                            style="width: 36px; align-self: flex-start" alt="">
+                                    </div>
+                                    <span class="plan__feature-info-top">Year</span>
+                                    <span class="plan__feature-info">Annual Rate</span>
+                                </div>
+                            </div>
 
 
+                        </div>
+                    </div>
+                </div>
+                <div class="coach" id="coach">
+                    <h3 class="coach-title">COACHES</h3>
+                    <div class="coach-content">
+                        <div class="coach-item">
+                            <img src="../static/icon/avatar/khoi.jpg" alt="" class="coach_item__img">
+                            <span class="coach_item__name">Nguyên Khôi</span>
+                        </div>
+                        <div class="coach-item">
+                            <img src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/396279480_1803355686744556_2375284548239243323_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFlaONqSt7dDlHg-xRw_fdg_N_vaQZUpzf83-9pBlSnN5HW-tmNEf83XLod8Cw90qPrxewF3gcLNG29FzUS6Uks&_nc_ohc=gJ1q5myRaU4AX-ySABV&_nc_ht=scontent.fdad1-3.fna&oh=00_AfASBVWF0Hln_F2LdqRspKF7nvclhuwnQ0M5Yj4q3HovUw&oe=658F5FA0"
+                                alt="" class="coach_item__img">
+                            <span class="coach_item__name">Thục Vi</span>
+                        </div>
+                        <div class="coach-item">
+                            <img src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/328518435_5848085421947911_7445825810977465414_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeGnm1--qRerTfvHZkjP0aCBibF9RJYAeWSJsX1ElgB5ZGc8yBESigLIuPgoqWIli5MTHz2hm-b2OyMz4pinjsZV&_nc_ohc=xqpEqCSVSmQAX-9-QFs&_nc_ht=scontent.fdad2-1.fna&oh=00_AfARfz3cvv6XpQ8z4c1uNd3NMFlPBCBSTQt7JzAoqI71zQ&oe=658EFE76"
+                                alt="" class="coach_item__img">
+                            <span class="coach_item__name">Duy Tin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="visit" id="visit">
+                    <h3 class="visit-title">VISIT OUR GYM</h3>
+                    <div class="visit-content">
+                        <img src="../static/icon/BACHKHOA.png" alt="" class="visit_item__img">
+                        <div class="visit-item">
+                            <span class="visit_item__name">Address: Nguyen Luong Bang, Lien Chieu, Danang</span>
+                            <span class="visit_item__name">Email: tinvikhoi@gmail.com</span>
+                            <span class="visit_item__name">Contact Number: 0686868686</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="coach" id = "coach">
-                <h3 class = "coach-title">COACHES</h3>
-                <div class="coach-content">
-                    <div class="coach-item">
-                        <img src="../static/icon/avatar/khoi.jpg" alt="" class = "coach_item__img">
-                        <span class = "coach_item__name">Nguyên Khôi</span>
-                    </div>
-                    <div class="coach-item">
-                        <img src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/396279480_1803355686744556_2375284548239243323_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFlaONqSt7dDlHg-xRw_fdg_N_vaQZUpzf83-9pBlSnN5HW-tmNEf83XLod8Cw90qPrxewF3gcLNG29FzUS6Uks&_nc_ohc=gJ1q5myRaU4AX-ySABV&_nc_ht=scontent.fdad1-3.fna&oh=00_AfASBVWF0Hln_F2LdqRspKF7nvclhuwnQ0M5Yj4q3HovUw&oe=658F5FA0" alt="" class = "coach_item__img">
-                        <span class = "coach_item__name">Thục Vi</span>
-                    </div>
-                    <div class="coach-item">
-                        <img src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/328518435_5848085421947911_7445825810977465414_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeGnm1--qRerTfvHZkjP0aCBibF9RJYAeWSJsX1ElgB5ZGc8yBESigLIuPgoqWIli5MTHz2hm-b2OyMz4pinjsZV&_nc_ohc=xqpEqCSVSmQAX-9-QFs&_nc_ht=scontent.fdad2-1.fna&oh=00_AfARfz3cvv6XpQ8z4c1uNd3NMFlPBCBSTQt7JzAoqI71zQ&oe=658EFE76" alt="" class = "coach_item__img">
-                        <span class = "coach_item__name">Duy Tin</span>
-                    </div>
-                </div>
-            </div>
-            <div class="visit" id = "visit">
-                <h3 class = "visit-title">VISIT OUR GYM</h3>
-                <div class="visit-content">
-                    <img src="../static/icon/BACHKHOA.png" alt="" class = "visit_item__img">
-                    <div class="visit-item">
-                        <span class = "visit_item__name">Address: Nguyen Luong Bang, Lien Chieu, Danang</span>
-                        <span class = "visit_item__name">Email: tinvikhoi@gmail.com</span>
-                        <span class = "visit_item__name">Contact Number: 0686868686</span>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
 </body>
